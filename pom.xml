@@ -38,7 +38,6 @@
             <artifactId>jaxws-ri</artifactId>
             <version>${jaxws-ri.version}</version>
             <type>pom</type>
-            <scope>import</scope>
         </dependency>
     </dependencies>
     <build>
@@ -61,6 +60,17 @@
                 <artifactId>maven-shade-plugin</artifactId>
                 <version>3.4.1</version>
                 <configuration>
+                    <filters>
+                        <filter>
+                            <artifact>*:*</artifact>
+                            <excludes>
+                                <exclude>module-info.class</exclude>
+                                <exclude>META-INF/*.SF</exclude>
+                                <exclude>META-INF/*.DSA</exclude>
+                                <exclude>META-INF/*.RSA</exclude>
+                            </excludes>
+                        </filter>
+                    </filters>
                     <shadedArtifactAttached>true</shadedArtifactAttached>
                 </configuration>
                 <executions>
