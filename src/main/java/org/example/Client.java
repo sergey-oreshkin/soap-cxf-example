@@ -11,10 +11,9 @@ import java.net.URL;
 public class Client {
     public static void main(String[] args) throws MalformedURLException {
         QName serviceName = new QName("http://localhost:8000/storageservice", "StorageService");
-        QName servicePort = new QName("http://localhost:8000/storageservice", "StoragePort");
         Service service = Service.create(new URL("http://localhost:8000/storageservice?wsdl"), serviceName);
         StorageService ss = service.getPort(StorageService.class);
-        System.out.println(ss.getDto("kjhgjh"));
-        ss.setDto(new Dto("34543"));
+        System.out.println(ss.getDto("12345"));
+        ss.setDto(new Dto("54321"));
     }
 }
