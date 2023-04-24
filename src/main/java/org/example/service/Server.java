@@ -10,7 +10,8 @@ import javax.xml.ws.Endpoint;
 @RequiredArgsConstructor
 public class Server {
 
-    public static final String DEFAULT_ADDRESS = "http://localhost:8000/storageservice";
+    public static final String DEFAULT_NAMESPACE = "http://localhost:8000/service";
+    public static final String DEFAULT_ADDRESS = "http://0.0.0.0:8000/service";
 
     private final StorageService service;
 

@@ -5,10 +5,10 @@ import org.example.dto.Dto;
 import javax.jws.WebParam;
 import javax.jws.WebService;
 
-@WebService(targetNamespace = "http://localhost:8000/storageservice", name = "StorageService")
+@WebService(targetNamespace = Server.DEFAULT_NAMESPACE, name = "StorageService")
 public interface StorageService {
 
-    Dto getDto(@WebParam(name = "id", targetNamespace = "http://localhost:8000/storageservice") String id);
+    Dto getDto(@WebParam(name = "id", targetNamespace = Server.DEFAULT_NAMESPACE) String id);
 
-    void setDto(@WebParam(name = "dto", targetNamespace = "http://localhost:8000/storageservice") Dto dto);
+    void setDto(@WebParam(name = "dto", targetNamespace = Server.DEFAULT_NAMESPACE) Dto dto);
 }

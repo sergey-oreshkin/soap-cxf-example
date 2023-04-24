@@ -8,7 +8,7 @@ import javax.jws.WebService;
 @Component
 @WebService(serviceName = "StorageService",
         portName = "StoragePort",
-        targetNamespace = "http://localhost:8000/storageservice",
+        targetNamespace = Server.DEFAULT_NAMESPACE,
         endpointInterface = "org.example.service.StorageService")
 public class StorageServiceImpl implements StorageService {
 
